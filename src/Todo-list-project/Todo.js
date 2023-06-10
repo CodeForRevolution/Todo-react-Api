@@ -4,15 +4,15 @@ import './todo.css'
 import { useState, useEffect } from 'react'
 
 
-// const getlocalStroge = () => {
-//     const data = JSON.parse(localStorage.getItem('todo'))
+const getlocalStroge = () => {
+    const data = JSON.parse(localStorage.getItem('todo'))
 
-//     if (data) {
-//         return data;
-//     } else {
-//         return [];
-//     }
-// }
+    if (data) {
+        return data;
+    } else {
+        return [];
+    }
+}
 
 
 
@@ -95,9 +95,9 @@ const Todo = () => {
 
 
 
-    // useEffect(() => {
-    //     localStorage.setItem('todo', JSON.stringify(item));
-    // }, [item])
+    useEffect(() => {
+        localStorage.setItem('todo', JSON.stringify(item));
+    }, [item])
 
 
     const editItem = async (id) => {
