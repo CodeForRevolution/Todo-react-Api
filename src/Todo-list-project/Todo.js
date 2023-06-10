@@ -142,7 +142,7 @@ const Todo = () => {
     return (
         <>
             <div className="page">
-                <h1 className='heading'>Todo App</h1>
+                <h1 className='heading'>Todo App v1</h1>
 
                 <div className="write">
                     <input type="text" className="input" placeholder='write 📅' value={value} onChange={(event) => setValue(event.target.value)} />
