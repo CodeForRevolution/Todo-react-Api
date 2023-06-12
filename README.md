@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+*we have define the four react hooks name "item","value","edit","toggle"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*we have set the intial data for hooks item=[] ,value='',edit='',toggle=false
 
-## Available Scripts
+*item is storing the array of object which we are getting from api "https://jsonplaceholder.typicode.com/todos/" this work is we are doing in useEffect hooks because we want all the data while App is getting mounted 
 
-In the project directory, you can run:
+*App contain  4 function addItem ,deleteItem,editItem,completed,
 
-### `npm start`
+*addItem function  will add the new todo Item to the list or Edit the existing todo Item from the list if the "toggle "is set to true
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*clicking on edit icon editItem function    will call and will set the toggle to "true"
+if the toggle will true icon of add item change to edit item icon 
+and and set the "item" title to the value that will display in the input field
+now when we will click to save button it will modify the existing todo-item
+also we are making a put request the url "https://jsonplaceholder.typicode.com/todos/"
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+*clicking on the delete icon delete makes a call to delte function where we are sending the id of particular todo item from that we are deleting the Item from the Item list also we are making delete request to this url "https://jsonplaceholder.typicode.com/todos/"
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*cliking on calender icon that showing the status of work wheather its completed or not completed function will call that set the todo-item property "completed" from "false" to "true" todo-item status icon will be change fron pending to completed
